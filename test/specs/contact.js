@@ -1,7 +1,7 @@
 import ContactPage from '../pages/contact-page';
 import { faker } from '@faker-js/faker';
 
-describe('Submit contact form', () => {
+describe('Contact', () => {
     it('Get success message', async() => {
         await ContactPage.open();
 
@@ -10,6 +10,6 @@ describe('Submit contact form', () => {
         //Assert
 
         const successMessage = await ContactPage.successMessage;
-        await expect(successMessage).toHaveText('Thank for contacting us! We will be in touch with you shortly');
+        await expect(successMessage).toHaveText('Thanks for contacting us! We will be in touch with you shortly');
     })
 });
